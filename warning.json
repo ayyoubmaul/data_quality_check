@@ -1,0 +1,331 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "day_off.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "max_value": 367,
+        "min_value": 300
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "value": 15
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column_list": [
+          "Unnamed: 0",
+          "Timestamp",
+          " NIK",
+          "Email Address",
+          "Your Name:",
+          "DRI's email:",
+          "Number of hours requested:",
+          "Leave start date:",
+          "Last day of leave:",
+          "Reason for absence:",
+          "Additional info related to request:",
+          "Team",
+          "Attach document needed here:",
+          "state",
+          "total_day_off"
+        ]
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "state"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "state",
+        "value_set": [
+          "APPROVED",
+          "DENIED",
+          "PENDING"
+        ]
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_kl_divergence_to_be_less_than",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "state",
+        "partition_object": {
+          "values": [
+            "APPROVED",
+            "DENIED",
+            "PENDING"
+          ],
+          "weights": [
+            0.6107784431137725,
+            0.0029940119760479044,
+            0.38622754491017963
+          ]
+        },
+        "threshold": 0.6
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Unnamed: 0"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Unnamed: 0",
+        "max_value": 1,
+        "min_value": -1
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Unnamed: 0",
+        "max_value": 334,
+        "min_value": 332
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Unnamed: 0",
+        "max_value": 167.5,
+        "min_value": 165.5
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Unnamed: 0",
+        "max_value": 167.5,
+        "min_value": 165.5
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "allow_relative_error": false,
+        "column": "Unnamed: 0",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              16,
+              18
+            ],
+            [
+              82,
+              84
+            ],
+            [
+              165,
+              167
+            ],
+            [
+              249,
+              251
+            ],
+            [
+              315,
+              317
+            ]
+          ]
+        }
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Timestamp"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Timestamp",
+        "min_value": 1
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "data_asset_name": "day_off",
+        "datasource": "output__dir",
+        "path": "/home/niagadata/output/day_off.csv"
+      },
+      "created_at": 1647870001.5441337,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_kwargs": {
+          "data_asset_name": "day_off",
+          "datasource": "output__dir",
+          "path": "/home/niagadata/output/day_off.csv"
+        },
+        "batch_markers": {
+          "ge_load_time": "20220321T134001.399908Z",
+          "pandas_data_fingerprint": "b873b299f0e34b667b478fcc5045085b"
+        },
+        "citation_date": "2022-03-21T13:40:01.570314Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      " NIK": {
+        "description": ""
+      },
+      "Additional info related to request:": {
+        "description": ""
+      },
+      "Attach document needed here:": {
+        "description": ""
+      },
+      "DRI's email:": {
+        "description": ""
+      },
+      "Email Address": {
+        "description": ""
+      },
+      "Last day of leave:": {
+        "description": ""
+      },
+      "Leave start date:": {
+        "description": ""
+      },
+      "Number of hours requested:": {
+        "description": ""
+      },
+      "Reason for absence:": {
+        "description": ""
+      },
+      "Team": {
+        "description": ""
+      },
+      "Timestamp": {
+        "description": ""
+      },
+      "Unnamed: 0": {
+        "description": ""
+      },
+      "Your Name:": {
+        "description": ""
+      },
+      "state": {
+        "description": ""
+      },
+      "total_day_off": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.40",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}
