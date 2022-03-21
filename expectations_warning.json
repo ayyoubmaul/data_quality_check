@@ -27,28 +27,6 @@
         }
       }
     },
-    {
-      "expectation_type": "expect_table_columns_to_match_ordered_list",
-      "ge_cloud_id": null,
-      "kwargs": {
-        "column_list": [
-          "Unnamed: 0",
-          "Timestamp",
-          " NIK",
-          "Email Address",
-          "Your Name:",
-          "DRI's email:",
-          "Number of hours requested:",
-          "Leave start date:",
-          "Last day of leave:",
-          "Reason for absence:",
-          "Additional info related to request:",
-          "Team",
-          "Attach document needed here:",
-          "state",
-          "total_day_off"
-        ]
-      },
       "meta": {
         "BasicSuiteBuilderProfiler": {
           "confidence": "very low"
@@ -102,18 +80,6 @@
           ]
         },
         "threshold": 0.6
-      },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
-    },
-    {
-      "expectation_type": "expect_column_values_to_not_be_null",
-      "ge_cloud_id": null,
-      "kwargs": {
-        "column": "Unnamed: 0"
       },
       "meta": {
         "BasicSuiteBuilderProfiler": {
