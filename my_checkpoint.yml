@@ -1,0 +1,12 @@
+name: my_checkpoint
+config_version:
+module_name: great_expectations.checkpoint
+class_name: LegacyCheckpoint
+validation_operator_name:
+batches:
+  - batch_kwargs:
+      path: /home/niagadata/output/day_off.csv
+      datasource: output__dir
+      data_asset_name: day_off
+    expectation_suite_names:
+      - day_off.warning
