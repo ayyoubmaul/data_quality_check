@@ -5,7 +5,9 @@ from great_expectations_provider.operators.great_expectations import GreatExpect
 from airflow.operators.dummy import DummyOperator
 from datetime import datetime
 
+# Define Great Expectations project path
 path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data_quality", "great_expectations")
+
 
 with DAG(
         dag_id="data_quality_validation",
@@ -20,8 +22,8 @@ with DAG(
 
     run_quality_check = GreatExpectationsOperator(
         task_id="run_quality_check",
-        data_context_root_dir=path,
-        checkpoint_name="my_checkpoint"
+        data_context_root_dir=path, # Great Expectations project path
+        checkpoint_name="my_checkpoint" # Name checkpoint that want to run
 
     )
 
@@ -30,9 +32,3 @@ with DAG(
     )
 
 start >> run_quality_check >> end
-
-# data = ge.read_csv(path+"/output/articles.csv")
-# print(data)
-
-# check_null = data.expect_column_values_to_not_be_null(column="article_id")
-# assert check_null["success"], "There are some null in columns"
