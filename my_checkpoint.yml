@@ -5,8 +5,8 @@ class_name: LegacyCheckpoint
 validation_operator_name:
 batches:
   - batch_kwargs:
-      path: /home/ayyoub/output/analytics.csv
+      path: /home/ayyoub/output/analytics.csv # path to csv file
       datasource: output__dir
       data_asset_name: day_off
     expectation_suite_names:
-      - analytics.warning
+      - analytics.warning # it under expectations dir
